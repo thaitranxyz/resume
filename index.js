@@ -2,11 +2,33 @@ const terminal = document.getElementById("terminal");
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const body = document.getElementsByTagName("body")[0];
-var gettingStarted = `Type available commands to view content of this page. <br/> Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
-var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
-terminal.scrollTop = terminal.scrollHeight;
+var commandList = [
+  "help",
+  "show resume",
+  "show experience",
+  "show skills",
+  "show contact",
+];
+
+var gettingStarted = `Type available commands to view content of this page. <br/> Available commands: <br/>`;
+
+function commandInit() {
+  commandList.forEach((element) => {
+    gettingStarted += "- " + element + "<br/>";
+    console.log(`- ${element},`);
+  });
+
+  return gettingStarted;
+}
+
+var menu = commandInit();
 
 output.innerHTML = gettingStarted;
+
+// printCommand();
+
+// var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
+terminal.scrollTop = terminal.scrollHeight;
 
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
@@ -14,7 +36,7 @@ input.addEventListener("keydown", function (e) {
     const command = input.value;
     input.value = "";
 
-    // Process the command (you can replace this with your resume content)
+    // Process the command
     const result = processCommand(command);
 
     // Display the result in the terminal
@@ -30,12 +52,12 @@ body.addEventListener("click", function () {
   input.focus();
 });
 function processCommand(command) {
-  var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
+  // var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
   command = command.trim();
   var name = `thaitran@127.0.0.1:~$ ${command} <br/>`;
   // Replace this with your own command processing logic
   if (command === "help") {
-    return `thaitran@127.0.0.1:~$ ${command} <br/> ${menu}`;
+    return menu;
   } else if (command === "show resume" || command === "sh resume") {
     return `
     ${name}
