@@ -15,7 +15,6 @@ var gettingStarted = `Type available commands to view content of this page. <br/
 function commandInit() {
   commandList.forEach((element) => {
     gettingStarted += "- " + element + "<br/>";
-    console.log(`- ${element},`);
   });
 
   return gettingStarted;
@@ -51,6 +50,7 @@ terminal.addEventListener("click", function () {
 body.addEventListener("click", function () {
   input.focus();
 });
+
 function processCommand(command) {
   // var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
   command = command.trim();
@@ -72,12 +72,6 @@ function processCommand(command) {
       <body>
         <header>
           <h1>Thai Tran</h1>
-          <p>
-            Email:
-            <a href="mailto:thai.d.t.tran@gmail.com">thai.d.t.tran@gmail.com</a>
-          </p>
-          <p>Phone: <a href="tel:0451012745">0451 012 745</a></p>
-          <p>
             GitHub:
             <a href="https://github.com/thaitranxyz" target="_blank"
               >https://github.com/thaitranxyz</a
@@ -258,10 +252,7 @@ function processCommand(command) {
   </section>`;
   } else if (command === "show contact" || command === "sh contact") {
     return `${name}<p>
-    Email:
-    <a href="mailto:thai.d.t.tran@gmail.com">thai.d.t.tran@gmail.com</a>
-  </p>
-  <p>Phone: <a href="tel:0451012745">0451 012 745</a></p>`;
+    Sorry this is not available at the moment`;
   } else if (command === "open youtube") {
     window.open("https://youtube.com/", "_blank");
     return `${name}starting youtube`;
