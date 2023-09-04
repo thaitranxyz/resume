@@ -236,6 +236,9 @@ function processCommand(command) {
   } else if (command === "open youtube") {
     window.open("https://youtube.com/", "_blank");
     return `starting youtube`;
+  } else if (command === "clear") {
+    output.innerHTML = "";
+    return "";
   } else {
     return `thaitran@127.0.0.1:~$ ${command} <br/>Command not recognized: ${command} ${menu}`;
   }
