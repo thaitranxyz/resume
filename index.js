@@ -32,12 +32,13 @@ body.addEventListener("click", function () {
 function processCommand(command) {
   var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
   command = command.trim();
+  var name = `thaitran@127.0.0.1:~$ ${command} <br/>`;
   // Replace this with your own command processing logic
   if (command === "help") {
     return `thaitran@127.0.0.1:~$ ${command} <br/> ${menu}`;
   } else if (command === "show resume" || command === "sh resume") {
     return `
-    thaitran@127.0.0.1:~$ ${command} <br/>
+    ${name}
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -165,7 +166,7 @@ function processCommand(command) {
     command === "sh experience" ||
     command === "sh exp"
   ) {
-    return ` <section id="experience">
+    return ` ${name} <section id="experience">
     <h2>Experience</h2>
 
     <article>
@@ -223,7 +224,7 @@ function processCommand(command) {
     command === "sh skills" ||
     command === "sh skill"
   ) {
-    return `<section id="skills">
+    return ` ${name} <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Programming Languages: C#, JavaScript, Python</li>
@@ -233,13 +234,19 @@ function processCommand(command) {
       <li>Web Hosting: Nginx, Linux</li>
     </ul>
   </section>`;
+  } else if (command === "show contact" || command === "sh contact") {
+    return `${name}<p>
+    Email:
+    <a href="mailto:thai.d.t.tran@gmail.com">thai.d.t.tran@gmail.com</a>
+  </p>
+  <p>Phone: <a href="tel:0451012745">0451 012 745</a></p>`;
   } else if (command === "open youtube") {
     window.open("https://youtube.com/", "_blank");
-    return `starting youtube`;
+    return `${name}starting youtube`;
   } else if (command === "clear") {
     output.innerHTML = "";
     return "";
   } else {
-    return `thaitran@127.0.0.1:~$ ${command} <br/>Command not recognized: ${command} ${menu}`;
+    return `${name}<br/>Command not recognized: ${command} ${menu}`;
   }
 }
