@@ -54,6 +54,8 @@ body.addEventListener("click", function () {
 function processCommand(command) {
   // var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
   command = command.trim();
+  command = command.toLowerCase();
+  console.log(command);
   var name = `thaitran@127.0.0.1:~$ ${command} <br/>`;
   // Replace this with your own command processing logic
   if (command === "help") {
