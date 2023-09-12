@@ -10,7 +10,7 @@ var commandList = [
   "show contact",
 ];
 
-var gettingStarted = `Type available commands to view content of this page. <br/> Available commands: <br/>`;
+var gettingStarted = `TYPE available commands and ENTER to view content of this page. <br/> Available commands: <br/>`;
 
 function commandInit() {
   commandList.forEach((element) => {
@@ -24,9 +24,6 @@ var menu = commandInit();
 
 output.innerHTML = gettingStarted;
 
-// printCommand();
-
-// var menu = `Available commands: <br> - help<br> - show resume<br> - show experience<br> - show skills<br>`;
 terminal.scrollTop = terminal.scrollHeight;
 
 input.addEventListener("keydown", function (e) {
