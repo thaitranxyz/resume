@@ -9,6 +9,136 @@ var commandList = [
   "show skills",
   "show contact",
 ];
+var contact = `<p>
+Email:
+<a href="mailto:thai.d.t.tran@gmail.com">thai.d.t.tran@gmail.com</a>
+</p>`;
+
+var header = `<h1>Thai Tran</h1>
+<div class="contact-info">
+  <p>
+    Email:
+    <a href="mailto:thai.d.t.tran@gmail.com">thai.d.t.tran@gmail.com</a>
+  </p>
+  <p>
+    GitHub:
+    <a href="https://github.com/thaitranxyz"
+      >https://github.com/thaitranxyz</a
+    >
+  </p>
+  <p>
+    Portfolio:
+    <a href="https://latte1sugar.xyz/">https://latte1sugar.xyz/</a>
+  </p>
+</div>`;
+
+var introduction = `<div class="section">
+<h2>Introduction:</h2>
+<p>
+  Junior web and application developer. Proficient in C#, .NET,
+  JavaScript, SQL, and many more tools. I am able to work both front end
+  and back end projects.
+</p>
+</div>`;
+
+var experience = `<div class="section">
+<h2>Experience:</h2>
+<p>
+  <strong>IPsupply - IT Technician</strong><br />February 2023 - Present
+</p>
+<ul>
+  <li>
+    Reduced time taken by implementing various C# scripts to help with
+    manual computing tasks.
+  </li>
+  <li>Assisted in warehouse management, inventory management.</li>
+  <li>
+    Provided technical support to warehouse staff for hardware and
+    software-related issues.
+  </li>
+</ul>
+<p>
+  <strong>Link Group - Developer Programmer</strong><br />February 2022 -
+  November 2022
+</p>
+<ul>
+  <li>
+    Produced high-volume personalized documents for clients using C# and
+    Quadient Inspire Designer.
+  </li>
+  <li>
+    Automated manual tasks with efficient scripts, improving workflow.
+  </li>
+  <li>
+    Provided quality assurance, offering valuable feedback for design and
+    data errors, and resolved bottlenecks for a more efficient process.
+  </li>
+</ul>
+<p>
+  <strong>TechBank Group - Software Developer Intern</strong><br />October
+  2020 - April 2021
+</p>
+<ul>
+  <li>
+    Assisted in maintaining CRM and ERP applications, addressing issues
+    and implementing improvements.
+  </li>
+  <li>
+    Gained experience in web application development, API creation, and
+    SQL database management.
+  </li>
+</ul>
+</div>`;
+
+var project = `<div class="section">
+<h2>Personal Projects:</h2>
+<p><strong>Dating App (C#, ASP.NET, Angular)</strong></p>
+<p>
+  Developed a web application using C# and Angular, emphasizing Dependency
+  Injection and MVC architecture.
+</p>
+<p><strong>Job Insight (C#, ASP.NET Web API, Razor Page)</strong></p>
+<p>
+  I am building this to track my job application. It is a fun project and
+  a place where I can experiment with different programming techniques.
+</p>
+<p>I am using ASP.NET Web API and Razor Page for this project.</p>
+<p><strong>Digital Resume (HTML, CSS, JavaScript)</strong></p>
+<p>
+  A terminal-like interface where you can type in commands and it will
+  return my resume and other things about myself. It is hosted on
+  <a href="https://latte1sugar.xyz">https://latte1sugar.xyz</a>.
+</p>
+</div>
+<div class="section">
+<h2>Education:</h2>
+<p>
+  <strong>University of Technology Sydney</strong><br />Bachelor’s Degree
+  in IT<br />Specialized in Enterprise System Development and Network
+  Security.
+</p>
+</div>`;
+
+var skills = `<div class="section">
+<h2>Skills:</h2>
+<p>
+  C#, ASP.NET MVC, ASP.NET Core Web API, JavaScript, Python, Angular,
+  HTML, CSS, Nginx, MySQL, SQL Server, Linux, Nginx, Proxmox, Git,
+  DBeaver, Cisco, Networking, Quadient, Photoshop.
+</p>
+</div>`;
+
+var resume = header + introduction + experience + project + skills;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const experience = document.getElementById("experienceff");
+  if (experience) {
+    console.log(experience);
+  } else {
+    ``;
+    console.log("no content");
+  }
+});
 
 var gettingStarted = `TYPE available commands and ENTER to view content of this page. <br/> Available commands: <br/>`;
 
@@ -58,200 +188,22 @@ function processCommand(command) {
   if (command === "help") {
     return menu;
   } else if (command === "show resume" || command === "sh resume") {
-    return `
-    ${name}
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Thai Tran - Resume</title>
-      </head>
-      <body>
-        <header>
-          <h1>Thai Tran</h1>
-            GitHub:
-            <a href="https://github.com/thaitranxyz" target="_blank"
-              >https://github.com/thaitranxyz</a
-            >
-          </p>
-        </header>
-    
-        <section id="introduction"> 
-          <h2>Introduction</h2>
-          <p>
-            Motivated IT professional with a Bachelor's degree in IT, passionate
-            about leveraging technology to drive positive change in organizations.
-            Proficient in C# and .NET development, web application development, and
-            SQL databases.
-          </p>
-        </section>
-    
-        <section id="experience">
-          <h2>Experience</h2>
-    
-          <article>
-            <h3>IPsupply - IT Technician</h3>
-            <p>February 2023 - Present</p>
-            <ul>
-              <li>
-                Verified incoming shipments, reconciled quantities against purchase
-                orders, and maintained accurate inventory records.
-              </li>
-              <li>
-                Contributed to the development and implementation of warehouse
-                organization techniques, enhancing overall efficiency.
-              </li>
-            </ul>
-          </article>
-    
-          <article>
-            <h3>Link Group - Developer Programmer</h3>
-            <p>February 2022 - November 2022</p>
-            <ul>
-              <li>
-                Produced high-volume personalized documents for clients using C# and
-                Quadient Inspire Designer.
-              </li>
-              <li>
-                Automated manual tasks with efficient scripts, improving workflow.
-              </li>
-              <li>
-                Provided quality assurance, offering valuable feedback for design
-                and data errors, and resolved bottlenecks for a more efficient
-                process.
-              </li>
-            </ul>
-          </article>
-    
-          <article>
-            <h3>TechBank Group - Software Developer Intern</h3>
-            <p>October 2020 - April 2021</p>
-            <ul>
-              <li>
-                Assisted in maintaining CRM and ERP applications, addressing issues
-                and implementing improvements.
-              </li>
-              <li>
-                Gained experience in web application development, API creation, and
-                SQL database management.
-              </li>
-            </ul>
-          </article>
-        </section>
-    
-        <section id="projects">
-          <h2>Personal Projects</h2>
-          <ul>
-            <li>
-              Dating App (C#, ASP.NET, Angular) - Developed a web application using
-              C# and Angular, emphasizing Dependency Injection and MVC architecture.
-            </li>
-          </ul>
-        </section>
-    
-        <section id="education">
-          <h2>Education</h2>
-          <p>University of Technology Sydney</p>
-          <p>Bachelor’s Degree in IT</p>
-          <ul>
-            <li>
-              Specialized in Enterprise System Development and Network Security.
-            </li>
-          </ul>
-        </section>
-    
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>Programming Languages: C#, JavaScript, Python</li>
-            <li>Web Technologies: HTML, CSS, ASP.NET, Entity Framework Core</li>
-            <li>Database: MySQL, MS SQL</li>
-            <li>Tools: Postman, Proxmox, VM</li>
-            <li>Web Hosting: Nginx, Linux</li>
-          </ul>
-        </section>
-      </body>
-    </html>
-    
-        `;
+    return `${name} ${resume}`;
   } else if (
     command === "show experience" ||
     command === "sh experience" ||
     command === "sh exp"
   ) {
-    return ` ${name} <section id="experience">
-    <h2>Experience</h2>
-
-    <article>
-      <h3>IPsupply - IT Technician</h3>
-      <p>February 2023 - Present</p>
-      <ul>
-        <li>
-          Verified incoming shipments, reconciled quantities against purchase
-          orders, and maintained accurate inventory records.
-        </li>
-        <li>
-          Contributed to the development and implementation of warehouse
-          organization techniques, enhancing overall efficiency.
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>Link Group - Developer Programmer</h3>
-      <p>February 2022 - November 2022</p>
-      <ul>
-        <li>
-          Produced high-volume personalized documents for clients using C# and
-          Quadient Inspire Designer.
-        </li>
-        <li>
-          Automated manual tasks with efficient scripts, improving workflow.
-        </li>
-        <li>
-          Provided quality assurance, offering valuable feedback for design
-          and data errors, and resolved bottlenecks for a more efficient
-          process.
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>TechBank Group - Software Developer Intern</h3>
-      <p>October 2020 - April 2021</p>
-      <ul>
-        <li>
-          Assisted in maintaining CRM and ERP applications, addressing issues
-          and implementing improvements.
-        </li>
-        <li>
-          Gained experience in web application development, API creation, and
-          SQL database management.
-        </li>
-      </ul>
-    </article>
-  </section>`;
+    return ` ${name} ${experience}`;
   } else if (
     command === "show skills" ||
     command === "show skill" ||
     command === "sh skills" ||
     command === "sh skill"
   ) {
-    return ` ${name} <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: C#, JavaScript, Python</li>
-      <li>Web Technologies: HTML, CSS, ASP.NET, Entity Framework Core</li>
-      <li>Database: MySQL, MS SQL</li>
-      <li>Tools: Postman, Proxmox, VM</li>
-      <li>Web Hosting: Nginx, Linux</li>
-    </ul>
-  </section>`;
+    return ` ${name} ${skills}`;
   } else if (command === "show contact" || command === "sh contact") {
-    return `${name}<p>
-    Sorry this is not available at the moment`;
+    return `${name} ${contact}`;
   } else if (command === "open youtube") {
     window.open("https://youtube.com/", "_blank");
     return `${name}starting youtube`;
