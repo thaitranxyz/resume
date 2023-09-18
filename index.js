@@ -49,8 +49,7 @@ var experience = `<div class="section">
   </li>
 </ul>
 <p>
-  <strong>Link Group - Developer Programmer</strong><br />February 2022 -
-  November 2022
+  <strong>Link Group - Developer Programmer</strong><br />February 2022
 </p>
 <ul>
   <li>
@@ -67,7 +66,7 @@ var experience = `<div class="section">
 </ul>
 <p>
   <strong>TechBank Group - Software Developer Intern</strong><br />October
-  2020 - April 2021
+  2020 
 </p>
 <ul>
   <li>
