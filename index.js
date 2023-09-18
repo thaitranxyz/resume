@@ -32,15 +32,6 @@ var header = `<h1>Thai Tran</h1>
   </p>
 </div>`;
 
-var introduction = `<div class="section">
-<h2>Introduction:</h2>
-<p>
-  Junior web and application developer. Proficient in C#, .NET,
-  JavaScript, SQL, and many more tools. I am able to work both front end
-  and back end projects.
-</p>
-</div>`;
-
 var experience = `<div class="section">
 <h2>Experience:</h2>
 <p>
@@ -128,17 +119,7 @@ var skills = `<div class="section">
 </p>
 </div>`;
 
-var resume = header + introduction + experience + project + skills;
-
-document.addEventListener("DOMContentLoaded", function () {
-  const experience = document.getElementById("experienceff");
-  if (experience) {
-    console.log(experience);
-  } else {
-    ``;
-    console.log("no content");
-  }
-});
+var resume = header + experience + project + skills;
 
 var gettingStarted = `TYPE available commands and ENTER to view content of this page. <br/> Available commands: <br/>`;
 
