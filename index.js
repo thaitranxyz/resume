@@ -7,6 +7,7 @@ var commandList = [
   "show resume",
   "show experience",
   "show skills",
+  "show education",
   "show contact",
 ];
 var contact = `<p>
@@ -32,93 +33,87 @@ var header = `<h1>Thai Tran</h1>
   </p>
 </div>`;
 
-var experience = `<div class="section">
-<h2>Experience:</h2>
+var summary = `<div class="section">
+<h2>Summary</h2>
 <p>
-  <strong>IPsupply - IT Technician</strong><br />February 2023 - Present
+    - Junior developer experiences in C#, JavaScript, SQL, and many other technologies.<br>
+    - Solid understanding of programming design principles, web technologies, database development.<br>
+    - Understand and follow good software development practices.<br>
+    - Enthusiast in developing technical and non-technical solutions to problems.
 </p>
+</div>`;
+
+var experience = ` <div class="section">
+<h2>Experience</h2>
+<h3>IPsupply - IT Technician</h3>
+<p>February 2023</p>
 <ul>
-  <li>
-    Reduced time taken by implementing various C# scripts to help with
-    manual computing tasks.
-  </li>
-  <li>Assisted in warehouse management, inventory management.</li>
-  <li>
-    Provided technical support to warehouse staff for hardware and
-    software-related issues.
-  </li>
+    <li>Reduced time taken by implementing scripts, mainly written in C#, to help with manual computing tasks.</li>
+    <li>Assisted in warehouse management, inventory management.</li>
+    <li>Provided technical support for hardware and software-related issues.</li>
+    <li>Ensured orders are shipped before deadlines.</li>
 </ul>
-<p>
-  <strong>Link Group - Developer Programmer</strong><br />February 2022
-</p>
+
+<h3>Link Group - Developer Programmer</h3>
+<p>February 2022</p>
 <ul>
-  <li>
-    Produced high-volume personalized documents for clients using C# and
-    Quadient Inspire Designer.
-  </li>
-  <li>
-    Automated manual tasks with efficient scripts, improving workflow.
-  </li>
-  <li>
-    Provided quality assurance, offering valuable feedback for design and
-    data errors, and resolved bottlenecks for a more efficient process.
-  </li>
+    <li>Produced high-volume personalized documents for clients using C# and Quadient Inspire Designer.</li>
+    <li>Automated manual tasks with scripts, mainly written in C#.</li>
+    <li>Provided quality assurance, offering valuable feedback for design and data errors, and resolved bottlenecks for a more efficient process.</li>
+    <li>Making relevant changes to data pipelines to fit the requirements, increase efficiency.</li>
+    <li>Quality assurance samples before sending them to clients for final review.</li>
 </ul>
-<p>
-  <strong>TechBank Group - Software Developer Intern</strong><br />October
-  2020 
-</p>
+
+<h3>TechBank Group - Software Developer Intern</h3>
+<p>October 2020</p>
 <ul>
-  <li>
-    Assisted in maintaining CRM and ERP applications, addressing issues
-    and implementing improvements.
-  </li>
-  <li>
-    Gained experience in web application development, API creation, and
-    SQL database management.
-  </li>
+    <li>Assisted in maintaining CRM and ERP applications, addressing issues and implementing improvements.</li>
+    <li>Gained experience in web application development, API creation, and SQL database management.</li>
+    <li>Implemented CRUD operations for various models in the system, maintained codebase, refactored for clean codes.</li>
+    <li>Used Git for version control.</li>
 </ul>
 </div>`;
 
 var project = `<div class="section">
-<h2>Personal Projects:</h2>
+<h2>Personal Projects</h2>
 <p><strong>Dating App (C#, ASP.NET, Angular)</strong></p>
-<p>
-  Developed a web application using C# and Angular, emphasizing Dependency
-  Injection and MVC architecture.
-</p>
+<p>Developed a web application using C# and Angular, emphasizing Dependency Injection and MVC architecture.</p>
+
 <p><strong>Job Insight (C#, ASP.NET Web API, Razor Page)</strong></p>
-<p>
-  I am building this to track my job application. It is a fun project and
-  a place where I can experiment with different programming techniques.
-</p>
+<p>I am building this to track my job application. It is a fun project and a place where I can experiment with different programming techniques.</p>
 <p>I am using ASP.NET Web API and Razor Page for this project.</p>
+
 <p><strong>Digital Resume (HTML, CSS, JavaScript)</strong></p>
-<p>
-  A terminal-like interface where you can type in commands and it will
-  return my resume and other things about myself. It is hosted on
-  <a href="https://latte1sugar.xyz">https://latte1sugar.xyz</a>.
-</p>
+<p>A terminal-like interface where you can type in commands and it will return my resume and other things about myself. It is hosted on <a href="https://latte1sugar.xyz">https://latte1sugar.xyz</a>.</p>
 </div>
-<div class="section">
-<h2>Education:</h2>
-<p>
-  <strong>University of Technology Sydney</strong><br />Bachelor’s Degree
-  in IT<br />Specialized in Enterprise System Development and Network
-  Security.
-</p>
+</div>`;
+
+var education = `<div class="section">
+<h2>Education</h2>
+<h3>University of Technology Sydney</h3>
+<p>Bachelor’s Degree in IT</p>
+<p>Enterprise System Development</p>
+<ul>
+    <li>Learnt concepts of software development, project management, data structures and algorithms, and cloud technologies during this course.</li>
+    <li>Application Development: applied design principles, developed and maintained application, mainly using C#, Java, and SQL.</li>
+</ul>
+<p>Network Security</p>
+<ul>
+<li>Networking Fundamentals: networking models and protocols, network security concepts, working on some common attacks like: DoS, SQL Injection, etc.</li>
+    <li>Web Hosting: skills to set up a web hosting environment on Linux using Nginx, virtual hosting to run multiple websites on one machine.</li>
+</ul>
 </div>`;
 
 var skills = `<div class="section">
-<h2>Skills:</h2>
-<p>
-  C#, ASP.NET MVC, ASP.NET Core Web API, JavaScript, Python, Angular,
-  HTML, CSS, Nginx, MySQL, SQL Server, Linux, Nginx, Proxmox, Git,
-  DBeaver, Cisco, Networking, Quadient, Photoshop.
-</p>
+<h2>Skills</h2>
+<p>Programming Languages: C#, JavaScript/TypeScript, Python, Java.</p>
+<p>Web Technologies: .NET, ASP.NET, Angular, HTML, CSS.</p>
+<p>Database: MySQL, SQL Server, MongoDB.</p>
+<p>Others: Git, Postman, Linux, Proxmox.</p>
+<p>Design: Photoshop, Lightroom, Premiere Pro, Figma.</p>
 </div>`;
 
-var resume = header + experience + project + skills;
+var resume = header + summary + experience + project + skills + education;
 
 var gettingStarted = `TYPE available commands and ENTER to view content of this page. <br/> Available commands: <br/>`;
 
@@ -182,6 +177,13 @@ function processCommand(command) {
     command === "sh skill"
   ) {
     return ` ${name} ${skills}`;
+  } else if (
+    command === "show education" ||
+    command === "sh education" ||
+    command === "sh edu" ||
+    command === "show edu"
+  ) {
+    return `${name} ${education}`;
   } else if (command === "show contact" || command === "sh contact") {
     return `${name} ${contact}`;
   } else if (command === "open youtube") {
