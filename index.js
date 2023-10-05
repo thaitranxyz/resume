@@ -80,8 +80,7 @@ var project = `<div class="section">
 <p>Developed a web application using C# and Angular, emphasizing Dependency Injection and MVC architecture.</p>
 
 <p><strong>Job Insight (C#, ASP.NET Web API, Razor Page)</strong></p>
-<p>I am building this to track my job application. It is a fun project and a place where I can experiment with different programming techniques.</p>
-<p>I am using ASP.NET Web API and Razor Page for this project.</p>
+<p>I am building this to track my job application using ASP.NET Web API and Razor Page.</p>
 
 <p><strong>Digital Resume (HTML, CSS, JavaScript)</strong></p>
 <p>A terminal-like interface where you can type in commands and it will return my resume and other things about myself. It is hosted on <a href="https://latte1sugar.xyz">https://latte1sugar.xyz</a>.</p>
@@ -177,6 +176,13 @@ function processCommand(command) {
     command === "sh skill"
   ) {
     return ` ${name} ${skills}`;
+  } else if (
+    command === "show projects" ||
+    command === "show project" ||
+    command === "sh projects" ||
+    command === "sh project"
+  ) {
+    return ` ${name} ${project}`;
   } else if (
     command === "show education" ||
     command === "sh education" ||
